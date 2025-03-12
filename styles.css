@@ -1,0 +1,238 @@
+:root {
+    --primary-color: #03acfe;
+    --primary-dark: #0288cc;
+    --white: #ffffff;
+    --dark: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.menu a {
+    color: var(--dark);
+    text-decoration: none;
+    margin-left: 2rem;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: var(--primary-color);
+}
+
+section {
+    padding: 5rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(45deg, var(--primary-color), var(--primary-dark));
+    color: var(--white);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--white);
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 2rem;
+    transition: transform 0.3s;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+}
+
+.services {
+    padding: 5rem 0;
+    background-color: #f5f5f5;
+}
+
+.services h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 3rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card i {
+    font-size: 3rem;
+    color: #03acfe;
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    color: #333;
+    margin: 1rem 0;
+}
+
+.service-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.service-features {
+    list-style: none;
+    margin: 1.5rem 0;
+    text-align: left;
+}
+
+.service-features li {
+    margin: 0.8rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #555;
+}
+
+.service-features li:before {
+    content: "✓";
+    color: #03acfe;
+    position: absolute;
+    left: 0;
+}
+
+.service-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-top: 1.5rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.about {
+    background-color: #f9f9f9;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--white);
+    transition: transform 0.3s;
+}
+
+.social-button:hover {
+    transform: translateY(-3px);
+}
+
+.whatsapp {
+    background-color: #25D366;
+}
+
+.instagram {
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+}
+
+.social-button i {
+    font-size: 1.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    section {
+        padding: 3rem 5%;
+    }
+    
+    .services {
+        padding: 3rem 0;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+    
+    .service-card {
+        padding: 1.5rem;
+    }
+}
